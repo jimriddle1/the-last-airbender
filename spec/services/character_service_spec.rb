@@ -11,10 +11,13 @@ RSpec.describe 'CharacterService' do
 
       character = parsed_json.first
 
-      # expect(character).to include :fullName, :description, :operatingHours
-      # expect(character[:fullName]).to be_a(String)
-      # expect(character[:description]).to be_a(String)
-      # expect(character[:operatingHours]).to be_a(Array)
-      # expect(park[:standardHours]).to be_a(Hash)
+      # binding.pry
+
+      expect(character).to include :name, :allies, :enemies, :affiliation
+      expect(character[:name]).to be_a(String)
+      expect(character[:affiliation]).to be_a(String)
+      expect(character[:allies]).to be_a(Array)
+      expect(character[:enemies]).to be_a(Array)
+
     end
 end
