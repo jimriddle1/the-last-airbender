@@ -6,11 +6,11 @@ RSpec.describe 'Character Search Page' do
   it 'Shows first 25 characters of fire nation' do
 
     visit "/"
-    # save_and_open_page
     select 'Fire Nation', from: 'nation'
 
     click_button 'Search For Members'
 
+    save_and_open_page
     expect(current_path).to eq("/search")
 
     expect(page).to have_content('Total People: 97')

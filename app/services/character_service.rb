@@ -1,7 +1,7 @@
 
 class CharacterService
   def self.find_characters(nation)
-    response = connection.get("characters?affiliation=#{nation}&perPage=497")
+    response = connection.get("characters?affiliation=#{nation.gsub("_", " ").titleize}&perPage=497")
     body = JSON.parse(response.body, symbolize_names: true)
     # binding.pry
     # body[:data]
