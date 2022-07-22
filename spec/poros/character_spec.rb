@@ -32,5 +32,5 @@ RSpec.describe Character do
     expect(character.affiliation).to eq(character_data[:affiliation])
     expect(character.photoUrl).to eq(character_data[:photoUrl])
   end
-  
+
 end
