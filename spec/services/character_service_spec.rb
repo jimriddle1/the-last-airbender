@@ -4,14 +4,12 @@ require 'rails_helper'
 
 RSpec.describe 'CharacterService' do
 
-    it 'returns characters given fire nation', :vcr do
+    it 'returns a character given fire nation', :vcr do
       parsed_json = CharacterService.find_characters("Fire Nation")
 
       expect(parsed_json).to be_a Array
 
       character = parsed_json.first
-
-      # binding.pry
 
       expect(character).to include :name, :allies, :enemies, :affiliation
       expect(character[:name]).to be_a(String)
