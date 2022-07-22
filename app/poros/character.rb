@@ -10,4 +10,20 @@ class Character
     @photoUrl = character_data[:photoUrl]
   end
 
+  def print_allies
+    if @allies.count == 0
+      "None"
+    else
+      @allies.join(", ")
+    end
+  end
+
+  def print_enemies
+    if @enemies.count == 0
+      "None"
+    else
+      @enemies.join(", ")
+    end
+  end
+
 end

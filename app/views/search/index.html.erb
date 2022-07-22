@@ -2,4 +2,11 @@
 
 <% @characters.first(25).each do |character| %>
   <h3>Name: <%= character.name %></h3>
+  <p>Allies: <%= character.print_allies %></p>
+  <p>Enemies: <%= character.print_enemies %></p>
+  <p>Affiliation: <%= character.affiliation %></p>
+  <% if character.photoUrl != nil %>
+    <%= image_tag("#{character.photoUrl}")%>
+  <% end %>
+
 <% end %>
